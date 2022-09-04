@@ -13,10 +13,10 @@ app.use(
         extended: true,
     }),
 ); // cài đặt cho body nhận được dữ liệu
-      app.use(express.json());
+app.use(express.json());
 
 //http logger
-    app.use(morgan('combined'));
+app.use(morgan('combined'));
 
 //template engine
 app.engine(
@@ -29,7 +29,7 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 // routes init
-route(      app);
+route(app);
 
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`);
